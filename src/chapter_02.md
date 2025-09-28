@@ -1,6 +1,8 @@
 # Chapter 2 - Variables
 
-Try to understand the below statement. It's ok if you don't get it, it's explained afterwards
+Try to understand the below statement. It's ok if you don't get it, it's
+explained afterwards
+
 > You set the variables mutability when you are declaring a variable
 
 Let's unpack the above statement
@@ -43,3 +45,44 @@ i = 2;
 ```
 
 Try removing the `mut` from the code, and then run the code with `cargo run`
+
+```rust
+let i = 0;
+i = 2;
+```
+
+What error does it give?
+
+It should be similar to:
+
+```
+Compiling playground v0.0.1 (/playground)
+error[E0384]: cannot assign twice to immutable variable `i`
+ --> src/main.rs:4:1
+  |
+3 | let i = 0;
+  |     - first assignment to `i`
+4 | i = 2;
+  | ^^^^^ cannot assign twice to immutable variable
+  |
+help: consider making this binding mutable
+  |
+3 | let mut i = 0;
+  |     +++
+
+For more information about this error, try `rustc --explain E0384`.
+error: could not compile `playground` (bin "playground") due to 1 previous error
+```
+
+The error message: `cannot assign twice to immutable variable i` means that we
+cannot give i a value twice (or in other words, cannot change its value)
+Therefore, `i` is an immutable variable. Notice how we didn't have to specify
+that `i` is an immutable variable. That's because by default, all variables are
+considered immutable. This is a feature exclusive to rust.
+
+> If you have experience with other coding languages, you may wonder why Rust
+> has this feature and the reason is simple. Some variables are meant to be the
+> same throughout the program. And Rust is the teacher holding a stick waiting
+> to make sure you don't change something you aren't meant to change in the
+> future. There are some more advanced reasons that you can have a look at once
+> you're more experienced with Rust.
