@@ -1,0 +1,5 @@
+[book]
+authors = ["unsecretised"]
+language = "en"
+src = "src"
+title = "Learn Rust - The basic guide"
