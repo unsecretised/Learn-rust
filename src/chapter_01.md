@@ -12,18 +12,15 @@ It usually implies that the statment is inside a function (like `fn main()`) and
 you can simply click the unhide button that appears when you hover over the code
 snippet
 
----
-
-Hello world is the first program that most programming languages teach
+> Hello world is the first program that most programming languages teach
 beginners.
-
 Many tutorials will teach you how to "print" Hello, World! to the terminal /
 console as the first project
 
-Below is the rust version
-
 ---
-In rust, everything starts with a main function.
+In rust, everything starts with a main function (annotated with `fn`).
+> Ignore what a function is for now. Just imagine a function as a container with things inside it.
+  We will cover functions more in Chapter 4
 
 This main function is the entry point of the program.
 
