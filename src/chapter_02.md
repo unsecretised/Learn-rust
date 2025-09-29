@@ -162,10 +162,10 @@ and it will work the exact same way.
 
 ```rs
 let i_8: i8 = 1;
-let i_16: i16 = 14;
+let i_16: i16 = -14;
 let i_32 = 45; // Notice how we don't specify i32 here? i32 is the default for numbers in rust.
-let i_64: i64 = 6493;
-let i_128: i128 = 128231;
+let i_64: i64 = -6493;
+let i_128: i128 = -128231;
 ```
 
 ### The `u` Serise:
@@ -195,3 +195,31 @@ let f_128: f128 = 0.1;
 > to understand why if you are interested. While the reason is not neccessary to
 > know for now, I recommend knowing that floating point arithmetic is one the
 > biggest weak points in computers.
+
+## `Vec` Data Type
+
+Earlier in this chapter, I mentioned a `Vec<T>` where `T` is a placeholder for a
+type. This is called a Vector or in other languages, called Array. In real life
+`Array` and `Vector` do have a few differences, however for simplicity reasons,
+you can consider them the same.
+
+A Vector can be thought of as a "List" of items (You may also here people use
+the word `list` as an alternative to arrays) It stores an unknown amount of
+data. (The limit is how much your hardware supports)
+
+In rust, there are a many ways to make a Vector, but I will show you only one.
+The other ways are more complex, and you would probably want to take a look at
+[the book](https://doc.rust-lang.org/book) for that.
+
+The most simple way to make a Vector is with `vec![]`
+```rs
+let odd_numbers = Vec![1,3,5,7,9];
+```
+
+> Remember the `<T>`? What if we were to specify a type for a vector?
+
+```rs
+let str_excl: Vec<&str> = vec!["", "Another element", "Another"];
+```
+
+This tells rust that we want a Vector that stores `&str`'s inside it.
