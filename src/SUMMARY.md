@@ -1,5 +1,6 @@
 # Summary
 
+- [First notes](./chapter_00.md)
 - [Chapter 1 - Hello World](./chapter_01.md)
 - [Chapter 2 - Variables](./chapter_02.md)
 - [Chapter 3 - Control Flow](./chapter_03.md)
