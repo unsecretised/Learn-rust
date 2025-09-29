@@ -86,3 +86,112 @@ considered immutable. This is a feature exclusive to rust.
 > to make sure you don't change something you aren't meant to change in the
 > future. There are some more advanced reasons that you can have a look at once
 > you're more experienced with Rust.
+
+## Type definitons
+
+A variable in rust can only be of a certin type, or in other words, the glass
+box's size is fixed, and cannot be changed.
+
+Some types in rust are:
+
+- `String` & `&str` (These are different types but both are String types, which
+  are used for storing text)
+- `Vec<T>` (Ignore the `<T>` for now, just imagine it as saying that its a Vec
+  of a type with `T` as a placholder) We will discuss this more later in this
+  chapter.
+- `i8`, `i16`, `i32`, `i64`, and `i128`. In simple terms, each of these types
+  store a negative / postitive number with a limit of `2^32` as the max value if
+  its `i32`
+- `u8`, `u16`, `u32`, `u64` and `i128`. This is the same as the `i` series, but
+  it can only store positive numbers.
+- The `f` series, which stores decimal numbers, like `22.1`, etc.
+
+You specify a Variables type in the following manner:
+
+```rs
+let string: Type = SomeValueHere;
+```
+
+Let's go through all the above mentioned types and their definitions.
+
+```rs
+let string_1: &str = "Something"; // &str
+let string_2 = "This is also an &str"; // &str
+
+let string_3: String = String::from("a String type is used to store text"); // String
+let string_4 = "Another way to define a String".to_string();
+```
+
+Let's unpack each line one by one.
+
+1. After telling rust that we are making a variable with `let`, we go into
+   saying that `string_1` should have a type of `&str` ("the shape of the box")
+   with `: &str` and then we "put something inside the box" with
+   `= "Something"`.
+1. In the second line, we talk don't tell Rust that we want a `&str`. This is
+   Rust automatically selecting the box shape, hence why these type's aren't
+   needed most of the time.
+1. In the third line, we see a new type called `String`. This is slightly
+   different from `&str` but for now we will treat it as the same wherever
+   possible. Defining a `String` requires us to either use `String::from()` or
+   do: `"&str here".to_string()` which tells rust to convert a `&str` to a
+   `String`
+
+## Using Variables
+
+Variables can be used by their names. For example, when we are creating a
+`String` we can make an `&str` into a string with `.to_string()`. Here's an
+example:
+
+```rs
+let example = "Rust is so Fun!!";
+let example_as_a_string = example.to_string();
+```
+
+You can also do:
+
+```rs
+let another_example = String::from(example);
+```
+
+and it will work the exact same way.
+
+## Other variable types:
+
+### The `i` Series
+
+```rs
+let i_8: i8 = 1;
+let i_16: i16 = 14;
+let i_32 = 45; // Notice how we don't specify i32 here? i32 is the default for numbers in rust.
+let i_64: i64 = 6493;
+let i_128: i128 = 128231;
+```
+
+### The `u` Serise:
+
+```rs
+let u_8: u8 = 1;
+let u_16: u16 = 14;
+let u_32: u32 = 45; 
+let u_64: u64 = 6493;
+let u_128: u128 = 128231;
+```
+
+### The `f` Series:
+
+```rs
+let f_8: f8 = 0.1;
+let f_16: f16 = 0.1;
+let f_32: f32 = 0.1;
+let f_64 = 0.1; // Floating point types are automatically inferred as f64's, but you can also explicitly define them.
+let f_128: f128 = 0.1;
+```
+
+> Despite humanity having achieved amazing feats, accurate floating point
+> mathematical operations are not one of them. The reason is kind of blurry to
+> me as well, so here's a
+> [YouTube Video](https://youtu.be/2gIxbTn7GSc?si=w5pT5SaGf19AxXuz) you can use
+> to understand why if you are interested. While the reason is not neccessary to
+> know for now, I recommend knowing that floating point arithmetic is one the
+> biggest weak points in computers.
