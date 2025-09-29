@@ -5,8 +5,8 @@
 I would recommend [installing Rust](https://rust-lang.org/tools/install) which
 will also install cargo. However, you can also use the
 [rust playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2024)
-for the first few chapters. However, after a certain point of time (chapter 4's modules section)
-It would be required to install Rust to make your life easier.
+for the first few chapters. However, after a certain point of time (chapter 4's
+modules section) It would be required to install Rust to make your life easier.
 
 Use this with VSCode or any IDE / Code editor of your choice. I recommend
 [VSCode](https://code.visualstudio.com) or [Zed](https://zed.dev)

@@ -31,6 +31,10 @@ fn main() {
     println!("Hello, world!");
 }
 ```
+Rust also has it's unique `macros` which are somewhat similar to functions, so you can ignore them for now.
+
+> As of now, I do not plan on covering macros in this book so you might want to check out the official book after this book
+to find out more about macros.
 ---
 
 ## Comments
