@@ -1,6 +1,35 @@
 # Welcome to Rust!
 
-## Installation / Alternatives
+## About this book:
+
+### Important notice #0:
+
+This book is meant to be for people new to programming and want to learn rust.
+Despite being an avid rust lover, I will advise you to not learn rust. In fact,
+Rust has so many complex concepts that take even the most advanced developers
+time to truly understand. My advice would be to learn the basics of python and /
+or JavaScript, and then come back to rust. However, if you are stubborn like
+many developers (and me), then you are welcome to use this book and try to learn
+rust.
+
+### Important notice #1:
+
+This book has been simplified and some deeper explanations has been skipped. My
+advice would be to use this book, but then once you have the basics down, take
+on the challenge of using [the official book](https://doc.rust-lang.org/book)
+which should be significantly easier to understand as they use more
+technological terms in comparison to this book.
+
+### Just some boring stuff about me:
+
+This book, is not affiliated with any company / foundation / organisation. It is
+currently a solo project by a 17-year-old rust developer, who had trouble
+learning rust from the book due to its extreme amounts of terminology used, and
+wants to help others learn rust as well. If you are a person from the rust
+foundation, then I would really appreciate it if you could try and voice this
+project out for me.
+
+# Installation / Alternatives
 
 I would recommend [installing Rust](https://rust-lang.org/tools/install) which
 will also install cargo. However, you can also use the
@@ -30,3 +59,14 @@ I've made a step by step guide on how I recommend you to create a new project.
 1. Then open the project in VSCode the same way you opened the projects folder
    (Step 2)
 1. Then run `cargo run` to run your project
+
+## Recommended Additional Resources:
+
+- [Discord](https://discord.gg/rust-lang-community) - This discord is filled
+  with a bunch of smart hackers, (and me) and you will be able to ask any of
+  your questions and get help with understanding various concepts with the help
+  from others. However, they will only help you, if you are willing to help
+  yourself, by using google if you can.
+- [Official Book](https://doc.rust-lang.org/book/) - This is the official rust
+  book. This current book, is a dumbed down version, with some of the advanced
+  chapters skipped.
