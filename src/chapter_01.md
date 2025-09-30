@@ -61,6 +61,6 @@ fn main() {
 
 > The rust community rarely uses multiline comments and usually resorts to
 > single line comments more. This is because they are an idiomatic comment
-> style.
+> style. So please support the idiots by using inline comments.
 
 ---
