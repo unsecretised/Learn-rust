@@ -212,6 +212,7 @@ The other ways are more complex, and you would probably want to take a look at
 [the book](https://doc.rust-lang.org/book) for that.
 
 The most simple way to make a Vector is with `vec![]`
+
 ```rs
 let odd_numbers = Vec![1,3,5,7,9];
 ```
@@ -219,7 +220,25 @@ let odd_numbers = Vec![1,3,5,7,9];
 > Remember the `<T>`? What if we were to specify a type for a vector?
 
 ```rs
-let str_excl: Vec<&str> = vec!["", "Another element", "Another"];
+let a_string = "some text";
+let str_excl: Vec<&str> = vec![a_string, "Another element", "Another"];
 ```
 
 This tells rust that we want a Vector that stores `&str`'s inside it.
+
+Each value in the vector also has an index, which is a number thats used to
+access an element based on its position, such as 1,2,3... However, in
+programming, the first number is usually 0, and not 1. So accessing the first
+element of the Vector can be done as seen in the example below:
+
+```rs
+let vector = vec!["something", "something_else"];
+
+let first_element = vector[0];
+
+println!("{}", first_element);
+```
+
+> In the next chapter, we will learn more about using the values inside a Vector
+> with `for` loops. I know this sounds like fruit loops, but you can't eat
+> these, and they don't mix well with milk.
