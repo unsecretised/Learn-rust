@@ -108,13 +108,13 @@ Some types in rust are:
 
 You specify a Variables type in the following manner:
 
-```rs
+```rust
 let string: Type = SomeValueHere;
 ```
 
 Let's go through all the above mentioned types and their definitions.
 
-```rs
+```rust
 let string_1: &str = "Something"; // &str
 let string_2 = "This is also an &str"; // &str
 
@@ -143,14 +143,14 @@ Variables can be used by their names. For example, when we are creating a
 `String` we can make an `&str` into a string with `.to_string()`. Here's an
 example:
 
-```rs
+```rust
 let example = "Rust is so Fun!!";
 let example_as_a_string = example.to_string();
 ```
 
 You can also do:
 
-```rs
+```rust
 let another_example = String::from(example);
 ```
 
@@ -160,7 +160,7 @@ and it will work the exact same way.
 
 ### The `i` Series
 
-```rs
+```rust
 let i_8: i8 = 1;
 let i_16: i16 = -14;
 let i_32 = 45; // Notice how we don't specify i32 here? i32 is the default for numbers in rust.
@@ -170,7 +170,7 @@ let i_128: i128 = -128231;
 
 ### The `u` Serise:
 
-```rs
+```rust
 let u_8: u8 = 1;
 let u_16: u16 = 14;
 let u_32: u32 = 45; 
@@ -180,7 +180,7 @@ let u_128: u128 = 128231;
 
 ### The `f` Series:
 
-```rs
+```rust
 let f_8: f8 = 0.1;
 let f_16: f16 = 0.1;
 let f_32: f32 = 0.1;
@@ -213,13 +213,13 @@ The other ways are more complex, and you would probably want to take a look at
 
 The most simple way to make a Vector is with `vec![]`
 
-```rs
+```rust
 let odd_numbers = Vec![1,3,5,7,9];
 ```
 
 > Remember the `<T>`? What if we were to specify a type for a vector?
 
-```rs
+```rust
 let a_string = "some text";
 let str_excl: Vec<&str> = vec![a_string, "Another element", "Another"];
 ```
@@ -231,7 +231,7 @@ access an element based on its position, such as 1,2,3... However, in
 programming, the first number is usually 0, and not 1. So accessing the first
 element of the Vector can be done as seen in the example below:
 
-```rs
+```rust
 let vector = vec!["something", "something_else"];
 
 let first_element = vector[0];
