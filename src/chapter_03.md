@@ -94,8 +94,8 @@ match "abc" {
 }
 ```
 
-Now let's move onto the next statement, `while` loops.
-`while` loops allow for a specific funtion to get repeated until that condition is no longer true.
+Now let's move onto the next statement, `while` loops. `while` loops allow for a
+specific funtion to get repeated until that condition is no longer true.
 
 ```rust
 let mut count = 0;
@@ -105,4 +105,9 @@ while count < 10 {
     count += 1; // this statement is equivalent to count =  count + 1
 }
 ```
+
+> In the above code, we use a `count += 1` which basically evaluates to set
+> `count` to the current value of `count + 1`. You can replace the `+` operator
+> with `-` for minus, `*` for multiplication, or `/` for division.
+
 
