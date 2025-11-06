@@ -94,6 +94,8 @@ match "abc" {
 }
 ```
 
+#### While Loops
+
 Now let's move onto the next statement, `while` loops. `while` loops allow for a
 specific funtion to get repeated until that condition is no longer true.
 
@@ -110,4 +112,39 @@ while count < 10 {
 > `count` to the current value of `count + 1`. You can replace the `+` operator
 > with `-` for minus, `*` for multiplication, or `/` for division.
 
+Finally, we will cover for loops.
 
+For loops are used to go through items inside an iterator. (Any data type which
+stores multiple elements, Vectors are one of the common ones)
+
+How would you print all of the elements below?:
+
+```rust
+let animals = vec!["chicken", "snake", "dog", "cat"];
+```
+
+One way would be to manually print each element, but thats not scalable, and is
+quite frankly, annoying. This is where for loops are used.
+
+```rust
+let animals = vec!["chicken", "snake", "dog", "cat"];
+
+for animal in animals {
+    println!("This animal is: {animal}");
+}
+```
+
+It allows you to dynamically do something with all the elements.
+
+You can also put in a Range of values.
+
+```rust
+let target = 10;
+
+for i in 0..target {
+    println!("The current number is: {}", i);
+}
+```
+
+But be careful, only use for loops for iterablesa and while loops only while
+needed
